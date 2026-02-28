@@ -2,3 +2,5 @@
 *.swp
 *.swo
 gamacros/
+gamacrosd.lock
+api.sock

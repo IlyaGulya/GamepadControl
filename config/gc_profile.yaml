@@ -21,9 +21,9 @@ rules:
       b:
         keystroke: escape
       start:
-        keystroke: enter
+        tap: enter
       back:
-        keystroke: cmd+w
+        tap: cmd+w
 
       # === D-pad ===
       dpad_up:
@@ -35,11 +35,11 @@ rules:
       dpad_right:
         keystroke: arrow_right
 
-      # === Bumpers — voice input ===
+      # === Bumpers — voice input (raw modifier for FlagsChanged events) ===
       lb:
-        keystroke: cmd
+        rawkey: rcmd
       rb:
-        keystroke: rcmd
+        rawkey: ralt
 
       # === Navigation layer (LT + button) ===
       lt+a:
@@ -47,21 +47,21 @@ rules:
       lt+b:
         shell: aerospace focus dfs-prev
       lt+dpad_left:
-        keystroke: cmd+shift+[
+        tap: cmd+shift+[
       lt+dpad_right:
-        keystroke: cmd+shift+]
+        tap: cmd+shift+]
       lt+dpad_up:
-        keystroke: cmd+k
+        tap: cmd+k
       lt+dpad_down:
-        keystroke: cmd+l
+        tap: cmd+l
       lt+start:
-        keystroke: cmd+t
+        tap: cmd+t
       lt+back:
-        keystroke: cmd+q
+        tap: cmd+q
       lt+x:
-        keystroke: cmd+f
+        tap: cmd+f
       lt+y:
-        keystroke: cmd+space
+        tap: cmd+space
 
       # === Window layer (RT + button, AeroSpace CLI) ===
       rt+dpad_left:
