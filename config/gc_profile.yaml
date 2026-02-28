@@ -1,0 +1,97 @@
+version: 1
+shell: /bin/zsh
+
+groups:
+  browser:
+    - company.thebrowser.Browser  # Arc
+    - app.zen-browser.zen         # Zen
+  terminal:
+    - com.github.wez.wezterm      # WezTerm
+
+rules:
+  common:
+    buttons:
+      # === Face buttons ===
+      a:
+        click: left
+      x:
+        click: right
+      y:
+        click: double
+      b:
+        keystroke: escape
+      start:
+        keystroke: enter
+      back:
+        keystroke: cmd+w
+
+      # === D-pad ===
+      dpad_up:
+        keystroke: arrow_up
+      dpad_down:
+        keystroke: arrow_down
+      dpad_left:
+        keystroke: arrow_left
+      dpad_right:
+        keystroke: arrow_right
+
+      # === Bumpers — voice input ===
+      lb:
+        keystroke: cmd
+      rb:
+        keystroke: rcmd
+
+      # === Navigation layer (LT + button) ===
+      lt+a:
+        keystroke: cmd+tab
+      lt+b:
+        keystroke: cmd+`
+      lt+dpad_left:
+        keystroke: cmd+shift+[
+      lt+dpad_right:
+        keystroke: cmd+shift+]
+      lt+dpad_up:
+        keystroke: cmd+k
+      lt+dpad_down:
+        keystroke: cmd+l
+      lt+start:
+        keystroke: cmd+t
+      lt+back:
+        keystroke: cmd+q
+      lt+x:
+        keystroke: cmd+f
+      lt+y:
+        keystroke: cmd+space
+
+      # === Window layer (RT + button, AeroSpace hotkeys) ===
+      rt+dpad_left:
+        keystroke: alt+h
+      rt+dpad_right:
+        keystroke: alt+l
+      rt+dpad_up:
+        keystroke: alt+k
+      rt+dpad_down:
+        keystroke: alt+j
+      rt+a:
+        keystroke: alt+shift+h
+      rt+b:
+        keystroke: alt+shift+l
+      rt+x:
+        keystroke: alt+f
+      rt+y:
+        keystroke: alt+/
+
+      # === RT + start — workspace switcher ===
+      rt+start:
+        keystroke: alt+1
+
+    sticks:
+      left:
+        mode: mouse_move
+        deadzone: 0.15
+        max_speed_px_s: 1600
+        gamma: 1.5
+      right:
+        mode: scroll
+        deadzone: 0.15
+        speed_lines_s: 80
