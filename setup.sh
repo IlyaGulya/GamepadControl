@@ -38,7 +38,12 @@ else
 fi
 
 if ! command -v cargo &>/dev/null; then
-    error "Rust/Cargo not found. Install it first: https://rustup.rs"
+    echo "Installing Rust..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    source "$HOME/.cargo/env"
+    info "Rust installed"
+else
+    info "Rust already installed"
 fi
 
 GAMACROS_REPO="https://github.com/IlyaGulya/gamacros.git"
