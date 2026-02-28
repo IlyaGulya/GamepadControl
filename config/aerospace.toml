@@ -38,3 +38,7 @@ alt-shift-5 = 'move-node-to-workspace 5'
 # Layout
 alt-f = 'fullscreen'
 alt-slash = 'layout tiles horizontal vertical'
+
+# Window/workspace switching
+alt-tab = 'focus-back-and-forth'
+alt-backtick = 'workspace-back-and-forth'

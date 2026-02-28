@@ -43,9 +43,9 @@ rules:
 
       # === Navigation layer (LT + button) ===
       lt+a:
-        keystroke: cmd+tab
+        shell: aerospace focus dfs-next
       lt+b:
-        keystroke: cmd+`
+        shell: aerospace focus dfs-prev
       lt+dpad_left:
         keystroke: cmd+shift+[
       lt+dpad_right:
@@ -63,27 +63,27 @@ rules:
       lt+y:
         keystroke: cmd+space
 
-      # === Window layer (RT + button, AeroSpace hotkeys) ===
+      # === Window layer (RT + button, AeroSpace CLI) ===
       rt+dpad_left:
-        keystroke: alt+h
+        shell: aerospace focus left
       rt+dpad_right:
-        keystroke: alt+l
+        shell: aerospace focus right
       rt+dpad_up:
-        keystroke: alt+k
+        shell: aerospace focus up
       rt+dpad_down:
-        keystroke: alt+j
+        shell: aerospace focus down
       rt+a:
-        keystroke: alt+shift+h
+        shell: aerospace move left
       rt+b:
-        keystroke: alt+shift+l
+        shell: aerospace move right
       rt+x:
-        keystroke: alt+f
+        shell: aerospace fullscreen
       rt+y:
-        keystroke: alt+/
+        shell: aerospace layout tiles horizontal vertical
 
       # === RT + start — workspace switcher ===
       rt+start:
-        keystroke: alt+1
+        shell: aerospace workspace 1
 
     sticks:
       left:
