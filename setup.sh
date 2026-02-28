@@ -29,16 +29,27 @@ else
     info "AeroSpace already installed"
 fi
 
+if ! brew list sdl2 &>/dev/null; then
+    echo "Installing SDL2..."
+    brew install sdl2
+    info "SDL2 installed"
+else
+    info "SDL2 already installed"
+fi
+
 if ! command -v cargo &>/dev/null; then
     error "Rust/Cargo not found. Install it first: https://rustup.rs"
 fi
 
+GAMACROS_REPO="https://github.com/IlyaGulya/gamacros.git"
+export LIBRARY_PATH="$(brew --prefix)/lib${LIBRARY_PATH:+:$LIBRARY_PATH}"
+
 if ! command -v gamacrosd &>/dev/null; then
     echo "Installing gamacros from fork..."
-    cargo install --git https://github.com/IlyaGulya/gamacros.git gamacrosd
+    cargo install --git "$GAMACROS_REPO" gamacrosd
     info "gamacros installed"
 else
-    info "gamacros already installed (run 'cargo install --git https://github.com/IlyaGulya/gamacros.git gamacrosd --force' to update)"
+    info "gamacros already installed (run 'LIBRARY_PATH=$(brew --prefix)/lib cargo install --git $GAMACROS_REPO gamacrosd --force' to update)"
 fi
 
 # --- Symlink configs ---
