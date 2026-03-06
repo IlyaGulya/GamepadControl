@@ -13,9 +13,9 @@ rules:
     buttons:
       # === Face buttons ===
       a:
-        click: left
+        hold_click: left
       x:
-        click: right
+        hold_click: right
       y:
         click: double
       b:
