@@ -47,9 +47,13 @@ rules:
       lt+b:
         shell: aerospace focus dfs-prev
       lt+dpad_left:
-        tap: cmd+shift+[
+        keystroke: cmd+shift+[
+        repeat_delay_ms: 300
+        repeat_interval_ms: 120
       lt+dpad_right:
-        tap: cmd+shift+]
+        keystroke: cmd+shift+]
+        repeat_delay_ms: 300
+        repeat_interval_ms: 120
       lt+dpad_up:
         tap: cmd+k
       lt+dpad_down:
